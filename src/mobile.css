@@ -1,0 +1,104 @@
+@media screen and (max-width:800px) {
+
+    /* Floating side buttons move to the bottom of
+    the screen */
+    .side-btns {
+        position: fixed;
+        height: fit-content;
+        flex-direction: row;
+        font-size: 2vw;
+        width: 100vw;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        margin: 0;
+        background-color: var(--mobile-background);
+        justify-content: space-evenly;
+        border-bottom: 2px var(--mobile-accents) solid;
+    }
+
+    .side-btns li {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        padding: 2vh 2vh;
+        background-color: transparent;
+    }
+
+    .side-btns .color-mode {
+        display: none;
+    }
+
+    .side-btns li li {
+        display: flex;
+        width: fit-content;
+        margin: 0;
+        align-items: center;
+        padding: 1.5vh;
+        font-size: 2vh;
+        outline: none;
+        background-color: transparent;
+        border: 2px var(--mobile-accents) solid;
+        color: var(--mobile-accents);
+    }
+
+    .side-btns li li:hover {
+        background-color: var(--mobile-highlights);
+    }
+
+    /* Remove the side coloured bar and increase all fonts
+    for main content */
+    .homepage .design {
+        display: none;
+    }
+
+    .homepage .main-content {
+        min-height: 100vh;
+        max-height: fit-content;
+        width: 100%;
+        margin: 0 auto;
+        background-color: var(--mobile-background);
+        padding-top: 20vh;
+        padding-right: 10vw;
+        padding-left: 5vw;
+    }
+
+    .homepage div h1 {
+        font-size: 9vw;
+
+    }
+
+    .homepage div p {
+        font-weight: 300;
+        border-top: 2px var(--mobile-accents) solid;
+        border-bottom: 2px var(--mobile-accents) solid;
+        padding: 5vh 3vh;
+        font-size: 2vh;
+        color: var(--mobile-accents);
+    }
+
+    .homepage .main-content h1 span {
+        color: var(--mobile-highlights)
+    }
+
+    /* Make the download button more responsive  */
+
+    .Cvbtn {
+        font-size: 3vw;
+        margin: 0 auto;
+        border: 2px var(--mobile-accents) solid;
+        padding: 1.5vw 1.5vw;
+        margin-top: 12%;
+        margin-bottom: 5%;
+        background-size: 200% 50%;
+
+    }
+
+    .Cvbtn .download-btn {
+        font-size: inherit;
+        margin-left: 2vw;
+        font-size: 6vw;
+        background-color: var(--mobile-highlights);
+        color: var(--main);
+    }
+}

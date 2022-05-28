@@ -1,13 +1,169 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --main: #ffff;
+  --highlights: #349999;
+  --accents: #2C2D2D;
+  --icon-back: #C4C4C4;
+  --mobile-background: #AFA2FF;
+  --mobile-accents: #333333;
+  --mobile-highlights: hsl(276, 100%, 40%);
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  position: relative;
+}
+
+/* Styling for side buttons */
+.side-btns {
+  position: fixed;
+  top: 0;
+  right: 4vw;
+  z-index: 100;
+  list-style-type: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: space-between;
+  padding-top: 3vh;
+  padding-bottom: 20vh;
+  font-size: 1.2vw;
+}
+
+.side-btns .color-mode {
+  background-color: transparent;
+  border: 2px solid var(--highlights);
+  color: var(--accents);
+  padding: 1vw 1vw;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.side-btns .color-mode:hover {
+  background-color: var(--highlights);
+  color: white;
+}
+
+
+
+
+.side-btns li li {
+  display: flex;
+  justify-content: center;
+  margin-top: 6vh;
+  background-color: transparent;
+  border: 2px solid var(--highlights);
+  display: flex;
+  align-items: center;
+  color: var(--accents);
+  padding: 1vw 1vw;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.side-btns li li:hover {
+  background-color: var(--highlights);
+  color: var(--main);
+}
+
+/* Styling for home page */
+
+.homepage {
+  height: fit-content;
+  width: 100vw;
+  background-color: var(--main);
+  display: flex;
+
+
+}
+
+.homepage .main-content {
+  width: 60%;
+  height: fit-content;
+  text-align: left;
+  padding-top: 25vh;
+  padding-right: 20vw;
+  font-family: "poppins";
+
+}
+
+.homepage .main-content h1 span {
+  color: var(--highlights)
+}
+
+.homepage div h1 {
+  font-size: 3vw;
+  color: var(--accents)
+}
+
+.homepage div p {
+  font-size: 1.2vw;
+  font-weight: 300;
+  margin-top: 1.2rem;
+  line-height: 4vh;
+  color: var(--accents);
+}
+
+.homepage .design {
+  background-color: var(--highlights);
+  width: 40%;
+  height: 100vh;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+
+}
+
+/* Styling for Cv button */
+.Cvbtn {
+  font-family: "poppins";
+  color: var(--accents);
+  font-size: 1.1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.2vw var(--highlights) solid;
+  background: linear-gradient(to left, var(--highlights) 50%, white 50%);
+  background-size: 200% 50%;
+  background-position: left bottom;
+  transition: all .5s ease-out;
+  padding-left: 1.2%;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 4%;
+}
+
+.Cvbtn:hover {
+  background-position: right bottom;
+}
+
+
+
+.Cvbtn .download-btn {
+  border-radius: 50%;
+  margin-left: 0.5vw;
+  margin-right: -1.2px;
+  font-size: 2vw;
+  background-color: var(--highlights);
+  padding: 0.25rem;
+  color: var(--accents);
 }
